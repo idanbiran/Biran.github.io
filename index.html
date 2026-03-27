@@ -151,6 +151,7 @@
 
 	</body>
 	<style>
+    /* 1. DEFAULT DESKTOP VIEW (Top Left Corner) */
     .top-logo {
         position: absolute;
         top: 40px;
@@ -160,9 +161,10 @@
     .top-logo img {
         height: 180px; 
         width: auto;
+        display: block;
     }
 
-    /* 1. Mobile Portrait (Tall Phone) */
+    /* 2. MOBILE PORTRAIT (Vertical Phone) - Centers and shrinks logo */
     @media screen and (max-width: 736px) {
         .top-logo {
             position: relative; 
@@ -170,24 +172,30 @@
             left: 0;
             text-align: center;
             width: 100%;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
         .top-logo img {
             height: 80px; 
+            margin: 0 auto;
         }
     }
 
-    /* 2. Mobile Landscape (Side-turned Phone) */
-    /* This triggers if the screen height is very small */
-    @media screen and (max-height: 450px) and (orientation: landscape) {
+    /* 3. MOBILE LANDSCAPE (Horizontal Phone) - Tucks it small in the corner */
+    @media screen and (max-height: 480px) and (orientation: landscape) {
         .top-logo {
-            position: absolute; /* Put it back in the corner */
-            top: 10px;
-            left: 10px;
+            position: absolute; 
+            top: 15px;
+            left: 15px;
+            text-align: left;
+            width: auto;
         }
         .top-logo img {
-            height: 50px; /* Make it very small so it doesn't hit the menu */
+            height: 50px; 
         }
     }
 </style>
+
+<div class="top-logo">
+    <img src="images/LeTEM_logo_dark.png" alt="LeTEM Lab Logo">
+</div>
 </html>
