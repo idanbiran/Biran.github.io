@@ -156,30 +156,38 @@
         top: 40px;
         left: 40px;
         z-index: 10000;
-        text-align: center;
     }
     .top-logo img {
-        height: 240px; 
+        height: 180px; 
         width: auto;
     }
 
-    /* This part fixes the Mobile Version */
+    /* 1. Mobile Portrait (Tall Phone) */
     @media screen and (max-width: 736px) {
         .top-logo {
             position: relative; 
             top: 20px;
             left: 0;
+            text-align: center;
             width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         .top-logo img {
-            height: 100px; /* Makes it smaller on phones */
+            height: 80px; 
+        }
+    }
+
+    /* 2. Mobile Landscape (Side-turned Phone) */
+    /* This triggers if the screen height is very small */
+    @media screen and (max-height: 450px) and (orientation: landscape) {
+        .top-logo {
+            position: absolute; /* Put it back in the corner */
+            top: 10px;
+            left: 10px;
+        }
+        .top-logo img {
+            height: 50px; /* Make it very small so it doesn't hit the menu */
         }
     }
 </style>
-
-<div class="top-logo">
-    <img src="images/LeTEM_logo_dark.png" alt="LeTEM Lab Logo">
-</div>
-
 </html>
