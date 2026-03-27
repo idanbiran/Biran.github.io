@@ -150,7 +150,36 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
-	<div style="position: absolute; top: 60px; left: 60px; z-index: 10000;">
-    <img src="images/LeTEM_logo_dark.png" alt="LeTEM Lab Logo" style="height: 240px; width: auto;">
+	<style>
+    .top-logo {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: 10000;
+        text-align: center;
+    }
+    .top-logo img {
+        height: 240px; 
+        width: auto;
+    }
+
+    /* This part fixes the Mobile Version */
+    @media screen and (max-width: 736px) {
+        .top-logo {
+            position: relative; 
+            top: 20px;
+            left: 0;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .top-logo img {
+            height: 100px; /* Makes it smaller on phones */
+        }
+    }
+</style>
+
+<div class="top-logo">
+    <img src="images/LeTEM_logo_dark.png" alt="LeTEM Lab Logo">
 </div>
+
 </html>
