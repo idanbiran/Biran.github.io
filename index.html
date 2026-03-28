@@ -6,15 +6,60 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* 1. DEFAULT DESKTOP VIEW (Top Left Corner) */
+			.top-logo {
+				position: absolute;
+				top: 40px;
+				left: 40px;
+				z-index: 10000;
+			}
+			.top-logo img {
+				height: 180px; 
+				width: auto;
+				display: block;
+			}
+
+			/* 2. MOBILE PORTRAIT (Vertical Phone) */
+			@media screen and (max-width: 736px) {
+				.top-logo {
+					position: relative; 
+					top: 20px;
+					left: 0;
+					text-align: center;
+					width: 100%;
+					margin-bottom: 20px;
+				}
+				.top-logo img {
+					height: 80px; 
+					margin: 0 auto;
+				}
+			}
+
+			/* 3. MOBILE LANDSCAPE (Horizontal Phone) */
+			@media screen and (max-height: 480px) and (orientation: landscape) {
+				.top-logo {
+					position: absolute; 
+					top: 15px;
+					left: 15px;
+					text-align: left;
+					width: auto;
+				}
+				.top-logo img {
+					height: 50px; 
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
+
+		<div class="top-logo">
+			<img src="images/LeTEM_logo_dark.png" alt="LeTEM Lab Logo">
+		</div>
 
 		<div id="wrapper">
 
 				<header id="header">
-						<div class="logo">
-							<span class="icon solid fa-microscope"></span>
-						</div>
 						<div class="content">
 							<div class="inner">
 								<h1>Biran Lab for Dynamic in situ TEM</h1>
@@ -24,8 +69,8 @@
 						<nav>
 							<ul>
 								<li><a href="#about">About us</a></li>
+								<li><a href="#research">Research</a></li>
 								<li><a href="#news">News</a></li>
-								<li><a href="#research">Research/<a></li>
 								<li><a href="#team">Team</a></li>
 								<li><a href="#publications">Publications</a></li>
 								<li><a href="#contact">Contact</a></li>
@@ -40,15 +85,23 @@
 								<h3>Welcome to the Biran Lab</h3>
 								<p>At the <strong>Biran Lab for Dynamic <i>in situ</i> TEM</strong>, we specialize in visualizing chemical reactions as they happen. Our research focuses on using state-of-the-art transmission electron microscopy to observe dynamic processes at atomic resolution under real-life environmental conditions.</p>
 								<p>By combining advanced hardware with high-speed imaging, we bridge the gap between theoretical modeling and physical observation. Our mission is to uncover the fundamental mechanisms driving material transformation, catalysis, and crystal growth.</p>
-								<h3>Research Projects</h3>
-								<p>We are currently exploring the following areas:</p>
-								<ul>
-									<li><strong>Atomic Reconstruction:</strong> Real-time mapping of nanoparticle surface dynamics.</li>
-									<li><strong>Gas-Phase Reactions:</strong> Observing catalysis at high temperatures in reactive environments.</li>
-									<li><strong>Liquid Cell TEM:</strong> Studying electrochemical processes and battery degradation at the nanoscale.</li>
-									<li><strong>Data-Driven Microscopy:</strong> Leveraging AI for automated feature tracking in TEM video data.</li>
-								</ul>
 								<p>We are always looking for curious and motivated students to join our journey at the forefront of microscopy science.</p>
+							</article>
+
+						<article id="research">
+								<h2 class="major">Research</h2>
+								
+								<section>
+									<h3>1. Elucidation of Heterogeneous Catalysis via <i>Operando</i> TEM</h3>
+									<span class="image main"><img src="images/research_catalysis.jpg" alt="Catalysis Research" /></span>
+									<p>Our research focuses on fundamentally redefining the use of electron microscopy for studying catalysts in reactive media. Instead of treating electron-dose as a constraint, we treat it as a primary scientific resource within a "dose-aware" operando platform. By coordinating multiple TEM modalities—including open and closed gas-cell systems—we aim to follow the same catalytic site or facet over time under true working conditions. This allows us to map exactly where catalytic turnover initiates and how active-site ensembles fluctuate in response to the environment, transforming TEM from a static imaging tool into a temporal discovery engine for sustainable chemical processes.</p>
+								</section>
+
+								<section>
+									<h3>2. Polymeric and Small Organic Crystal Design</h3>
+									<span class="image main"><img src="images/research_organic.jpg" alt="Organic Crystal Research" /></span>
+									<p>We address the critical challenge of imaging highly beam-sensitive materials, such as polymers, pharmaceuticals, and organic semiconductors. By leveraging adaptive low-dose workflows and advanced 4D-STEM techniques, our lab uncovers the earliest stages of crystallization and soft-matter phase transformations that are usually obliterated by standard imaging. We focus on the concept of "continuum crystallization," bridging the gap between molecular self-assembly and macroscopic material properties. This research is vital for the development of the next generation of bioelectronics and stable pharmaceutical formulations, where near-atomic resolution under realistic conditions is the key to innovation.</p>
+								</section>
 							</article>
 
 						<article id="news">
@@ -66,29 +119,7 @@
 								</ul>
 							</article>
 
-					<article id="research">
-						<h2 class="major">Research</h2>
-					
-						<section>
-							<h3 style="color: #ffffff; border-bottom: solid 1px rgba(255, 255, 255, 0.2); padding-bottom: 0.5rem;">
-								1. Elucidation of Heterogeneous Catalysis via <i>Operando</i> TEM
-							</h3>
-							<span class="image main"><img src="images/research_catalysis.jpg" alt="In-situ TEM Catalysis Setup" /></span>
-							<p>Our program fundamentally redefines how the electron microscope is used to study catalysts in reactive media. [cite: 253] By establishing an <strong>integrated operando platform</strong>, we coordinate multiple TEM modalities—including open and closed gas-cell systems—to observe catalytic sites under working conditions. [cite: 254, 255, 336]</p>
-							<p>Using high-dynamic-range detectors and sub-angstrom resolution, we map where catalytic turnover initiates and how active-site ensembles fluctuate in response to gas composition and temperature. [cite: 258, 330] This approach transforms TEM from a static imaging tool into a temporal discovery engine for sustainable chemical processes. [cite: 259]</p>
-						</section>
-					
-						<section>
-							<h3 style="color: #ffffff; border-bottom: solid 1px rgba(255, 255, 255, 0.2); padding-bottom: 0.5rem;">
-								2. Polymeric and Organic Crystal Design
-							</h3>
-							<span class="image main"><img src="images/research_organic.jpg" alt="Low-dose Organic Crystallization" /></span>
-							<p>We address the challenge of imaging beam-sensitive organic molecules, polymers, and pharmaceuticals. [cite: 263, 365, 392] By leveraging <strong>adaptive low-dose workflows</strong> and 4D-STEM, we uncover the earliest steps of crystallization and soft-matter phase transformations that were previously hidden due to beam damage. [cite: 254, 264, 369]</p>
-							<p>Our research focuses on "continuum crystallization," linking initial molecular order to final material properties. [cite: 302] This platform allows us to study polymer ordering and pharmaceutical polymorphism under realistic environmental conditions, providing critical insights for the development of bioelectronics and drug delivery systems. [cite: 378, 380, 401]</p>
-						</section>
-					</article>
-					
-					<article id="team">
+						<article id="team">
 								<h2 class="major">Team</h2>
 								<section>
 									<h3>Principal Investigator</h3>
@@ -173,52 +204,4 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
-	<style>
-    /* 1. DEFAULT DESKTOP VIEW (Top Left Corner) */
-    .top-logo {
-        position: absolute;
-        top: 40px;
-        left: 40px;
-        z-index: 10000;
-    }
-    .top-logo img {
-        height: 240px; 
-        width: auto;
-        display: block;
-    }
-
-    /* 2. MOBILE PORTRAIT (Vertical Phone) - Centers and shrinks logo */
-    @media screen and (max-width: 736px) {
-        .top-logo {
-            position: relative; 
-            top: 20px;
-            left: 0;
-            text-align: center;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-        .top-logo img {
-            height: 120px; 
-            margin: 0 auto;
-        }
-    }
-
-    /* 3. MOBILE LANDSCAPE (Horizontal Phone) - Tucks it small in the corner */
-    @media screen and (max-height: 480px) and (orientation: landscape) {
-        .top-logo {
-            position: absolute; 
-            top: 15px;
-            left: 15px;
-            text-align: left;
-            width: auto;
-        }
-        .top-logo img {
-            height: 120px; 
-        }
-    }
-</style>
-
-<div class="top-logo">
-    <img src="images/LeTEM_logo_dark_nowatermark.png" alt="LeTEM Lab Logo">
-</div>
 </html>
